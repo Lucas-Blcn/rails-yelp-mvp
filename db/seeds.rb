@@ -35,6 +35,7 @@ end
   content = Faker::Lorem.paragraph(sentence_count: 3)
   rating = Faker::Number.between(from: 1, to: 5)
   restaurant_id = Faker::Number.between(from: 1, to: 10)
+end
 
 # dishoom = {
 #   name: 'Dishoom',
