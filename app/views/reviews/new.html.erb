@@ -1,0 +1,8 @@
+<h1>New review</h1>
+
+<%= #On passe 2 paramètres car le chemin de la page c'est restaurants/:restaurant_id/reviews/new
+  simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>

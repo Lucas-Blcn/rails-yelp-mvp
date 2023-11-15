@@ -1,0 +1,15 @@
+<h1>Je suis la show : <%=@restaurant.name%></h1>
+<div>
+  <h2>Nos informations</h2>
+  <p>Address: <%=@restaurant.address %></p>
+  <p>Phone Number: <%=@restaurant.phone_number %></p>
+  <p>category: <%=@restaurant.category %> food</p>
+</div>
+
+<h2>Nos avis clients</h2>
+<div class = "bg-warning col-3">
+  <% @restaurant.reviews.each do |review| %>
+    <p><%= review.content %> - <%= review.rating %></p>
+  <% end %>
+</div>
+<%= link_to "Back to our restaurants", restaurants_path %>

@@ -1,0 +1,15 @@
+<h1>Je suis l'index : Tous nos supers restaurants</h1>
+<div>
+  <% @restaurants.each do |restaurant| %>
+    <p><%= link_to restaurant.name, restaurant_path(restaurant.id)%> |
+    <%= link_to "update", edit_restaurant_path(restaurant.id)%> |
+    <%= link_to "add a comment", new_restaurant_review_path(restaurant.id,restaurant.reviews)%> |
+    <%= link_to "delete", restaurant_path(restaurant.id),
+    data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete this restaurant?"}
+    %>
+    </p>
+  <% end %>
+</div>
+<p>
+ <%= link_to "create a new restaurant", new_restaurant_path %>
+</p>
